@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>New post</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/"><button>Go back</button></a>
+    <form method="POST" action="/new">
+      <h2>Message From</h2>
+      <div class="form-input">
+        <label for="name">Name (2 to 15 characters):</label>
+
+        <input
+          type="text"
+          id="name"
+          name="user"
+          required
+          minlength="2"
+          maxlength="15"
+        />
+      </div>
+
+      <div class="form-input">
+        <label for="text">Text (4 to 100 characters):</label>
+
+        <textarea
+          id="text"
+          name="text"
+          required
+          minlength="4"
+          maxlength="100"
+        ></textarea>
+      </div>
+      <input type="submit" value="Add message" />
+    </form>
+  </body>
+</html>
