@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+h1 {
+  font-size: 2.3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+  margin: 10px;
+}
+label {
+  font-family: "Oswald", sans-serif;
+}
+.messages-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 800px;
+  flex-wrap: wrap;
+}
+
+.message {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.345);
+  border-radius: 10px;
+  background-color: #ddedfeb1;
+  color: #011324;
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+button,
+input[type="submit"] {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  background-color: #0c3468;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #296cbf;
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  font-size: 1.1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+textarea#text {
+  height: 150px;
+  resize: none;
+}
+input:focus,
+textarea:focus {
+  outline: none; /* remove default blue outline */
+  border: 1px solid #88bdf2; /* soft light blue border */
+  box-shadow: 0 0 5px rgba(136, 189, 242, 0.5); /* soft glow effect */
+}
