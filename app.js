@@ -10,7 +10,7 @@ const indexRouter = require("./routes/indexRouter");
 
 app.use("/", indexRouter);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Mini Message Board  - listening on port ${PORT}! `);
 });
