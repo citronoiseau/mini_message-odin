@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const {
   getMessages,
-  getMessageByAuthor,
+  getMessageById,
   addMessage,
 } = require("../controllers/messageController");
 
@@ -15,6 +15,6 @@ indexRouter.get("/new", (req, res) => {
 
 indexRouter.post("/new", addMessage);
 
-indexRouter.get("/message/:authorName", getMessageByAuthor);
+indexRouter.get("/message/:id", getMessageById);
 
 module.exports = indexRouter;

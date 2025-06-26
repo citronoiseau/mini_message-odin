@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const CustomNotFoundError = require("../errors/CustomNotFoundError");
-const db = require("../db");
+const db = require("../db/queries");
 
 const getMessages = asyncHandler(async (req, res) => {
   const messages = await db.getMessages();
@@ -22,14 +22,14 @@ const addMessage = asyncHandler(async (req, res) => {
   res.redirect("/");
 });
 
-const getMessageByAuthor = asyncHandler(async (req, res) => {
-  const { authorName } = req.params;
+const getMessageById = asyncHandler(async (req, res) => {
+  const { id } = req.params;
 
-  const message = await db.getMessageByAuthor(authorName);
+  const message = await db.getMessageById(id);
   if (!message) {
     throw new CustomNotFoundError("User not found");
   }
-  res.render("messageInfo", { user: message.user, text: message.text });
+  res.render("messageInfo", { user: message.username, text: message.text });
 });
 
-module.exports = { getMessages, getMessageByAuthor, addMessage };
+module.exports = { getMessages, getMessageById, addMessage };

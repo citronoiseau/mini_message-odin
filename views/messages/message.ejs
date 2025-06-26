@@ -1,7 +1,7 @@
 <li class="message">
   <div>
-    <%= message.text %> — <em> <%= message.user %></em>
+    <%= message.text %> — <em> <%= message.username %></em>
     — <%= message.added %>
   </div>
-  <a href="/message/<%= message.user %>"><button>Open message</button></a>
+  <a href="/message/<%= message.id %>"><button>Open message</button></a>
 </li>
